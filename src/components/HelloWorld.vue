@@ -1,14 +1,31 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+  import { ref } from 'vue'
 
-defineProps<{ msg: string }>()
+  defineProps<{ msg: string }>()
 
-const count = ref(0)
+  const count = ref(0)
+
+  for (const item of []) {
+    console.log(item)
+  }
+
+  type Kind = {
+    name: string
+    age: number
+  }
+
+  let boo: Kind = {
+    name: '',
+    age: 1,
+  }
+
+  const foo = 5
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
-
+  <div class="first" />
+  <h1> {{ msg }} </h1>
+  <p />
   <p>
     Recommended IDE setup:
     <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
@@ -19,9 +36,7 @@ const count = ref(0)
   <p>See <code>README.md</code> for more information.</p>
 
   <p>
-    <a href="https://vitejs.dev/guide/features.html" target="_blank">
-      Vite Docs
-    </a>
+    <a href="https://vitejs.dev/guide/features.html" target="_blank"> Vite Docs </a>
     |
     <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Docs</a>
   </p>
@@ -31,22 +46,25 @@ const count = ref(0)
     Edit
     <code>components/HelloWorld.vue</code> to test hot module replacement.
   </p>
+  <div />
 </template>
 
 <style scoped>
-a {
-  color: #42b983;
-}
+  .first {
+  }
+  a {
+    color: #42b983;
+  }
 
-label {
-  margin: 0 0.5em;
-  font-weight: bold;
-}
+  label {
+    margin: 0 0.5em;
+    font-weight: bold;
+  }
 
-code {
-  background-color: #eee;
-  padding: 2px 4px;
-  border-radius: 4px;
-  color: #304455;
-}
+  code {
+    background-color: #eee;
+    padding: 2px 4px;
+    border-radius: 4px;
+    color: #304455;
+  }
 </style>
